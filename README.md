@@ -57,7 +57,8 @@ output "ec2KeyGenerated" {
   value = module.ec2_key_generated.name
 }
 output "ec2KeyGeneratedOpensshPriv" {
-  value = module.ec2_key_generated.private_key_openssh
+  value     = module.ec2_key_generated.private_key_openssh
+  sensitive = true
 }
 output "ec2KeyGeneratedOpensshPub" {
   value = module.ec2_key_generated.private_key_pub_openssh
